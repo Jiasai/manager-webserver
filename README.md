@@ -20,11 +20,11 @@
 ### `npm run dev`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:8081](http://localhost:8081) to view it in the browser.
 
-### package-lock.json锁定开发依赖
+### `package-lock.json锁定开发依赖`
 
-### .env.dev 设置自定义环境变量
+### `.env.dev 设置自定义环境变量`
 获取环境变量
 
 console.log("环境变量=>",import.meta.env)
