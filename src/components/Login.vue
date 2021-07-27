@@ -3,9 +3,16 @@
   <el-button @click="goHome">回首页</el-button>
 </template>
 
-<!--vue3方式 <script setup>
-import { reactive } from "vue";
+
+<script setup>
+//vue3方式 
+import { reactive,getCurrentInstance } from "vue";
 import { useRouter } from "vue-router";
+const {proxy} = getCurrentInstance(); //相当于mounted(){}生命周期函数中的this
+proxy.$request.get("/login", { username: "jack" }, { withCredentials: true })
+      .then((data) => {   
+        console.log(data);
+      });
 
 const state = reactive({ count: 0 });
 const router = useRouter();
@@ -13,9 +20,9 @@ const router = useRouter();
 const goHome = () => {
   router.push("/welcome");
 };
-</script>-->
+</script>
 
-<script>
+<!--<script>
 export default {
   name: "login",
   mounted() {
@@ -31,6 +38,6 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
 <style scoped></style>
