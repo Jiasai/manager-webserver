@@ -1,6 +1,6 @@
 <template>
   <h1>欢迎来到登录界面</h1>
-  <button @click="goHome">回首页</button>
+  <el-button @click="goHome">回首页</el-button>
 </template>
 
 <!--vue3方式 <script setup>
@@ -17,14 +17,20 @@ const goHome = () => {
 
 <script>
 export default {
-  name:"login",
-  methods:{
-    goHome(){
-      this.$router.push('/welcome')
-    }
-  }
-}
+  name: "login",
+  mounted() {
+    this.$request
+      .get("/login", { username: "jack" }, { withCredentials: true })
+      .then((data) => {
+        console.log(data);
+      });
+  },
+  methods: {
+    goHome() {
+      this.$router.push("/welcome");
+    },
+  },
+};
 </script>
-
 
 <style scoped></style>
