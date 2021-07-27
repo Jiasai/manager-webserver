@@ -18,10 +18,10 @@
   </p>
 </template>
 
-<script setup>
+<script setup> //样的方式 不需要 return出去了 相当于 setup(){......}中写
 import { defineProps, reactive } from 'vue'
 
-defineProps({
+defineProps({ // defineProps()传递来的参数变量
   msg: String
 })
 
