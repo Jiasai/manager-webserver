@@ -26,7 +26,8 @@ export default {
     let AllStorage = window.localStorage;
     delete AllStorage[config.namespace];
     for (let i in AllStorage) {
-      window.localStorage.setItem(`${i}`, AllStorage[key]); //其他的写入
+        if(i==='length'||i==='clear'||i==='key'||i==='getItem'||i==='setItem'||i==='removeItem') continue;
+        window.localStorage.setItem(`${i}`, AllStorage[i]); //其他的写入
     }
   },
 };

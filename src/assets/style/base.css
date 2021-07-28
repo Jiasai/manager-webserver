@@ -1,0 +1,66 @@
+@import "./reset.css";
+html {
+  /*font-size:100px*/
+}
+html,
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+*:not([class^="el-"]) {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr,
+a,
+em,
+img,
+strong,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+input,
+button,
+tr,
+th,
+td,
+footer,
+header,
+nav {
+  font-family: "Helvetica Neue", Tahoma, Arial, PingFangSC-Regular,
+    "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover{
+  color: rgb(7, 63, 182);
+}
+
+img {
+  /* display: block; */
+  vertical-align: top;
+}

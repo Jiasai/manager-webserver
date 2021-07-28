@@ -8,6 +8,8 @@ import storage from './utils/storage';
 import ElementPlus from "element-plus";
 import 'element-plus/lib/theme-chalk/index.css';
 
+//导入基本样式
+import "./assets/style/index.css"
 
 
 const app = createApp(App);
