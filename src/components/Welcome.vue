@@ -5,7 +5,13 @@
 
 <script>
     export default {
-      name:"Welcome"
+      name:"Welcome",
+      mounted(){
+        this.$storage.setItem("userInfo",{name:"lisi",address:"xxx小区"})
+        console.log(this.$storage.getItem("userInfo"))
+        this.$storage.clearAll()
+
+      }
     }
 </script>
 

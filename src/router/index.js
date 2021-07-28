@@ -1,7 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-
-import Login from "../components/Login.vue";
-
+import Home from "../components/Home.vue";
 const routes = [ //配置路由规则
   {
     name: "home",
@@ -9,8 +7,7 @@ const routes = [ //配置路由规则
     meta: {
       title: "首页",
     },
-    component: () =>
-      import(/* webpackChunkName: "home" */ "../components/Home.vue"),
+    component: Home,
     redirect: "/welcome",
     children: [
       {
@@ -28,15 +25,14 @@ const routes = [ //配置路由规则
         meta: {
           title: "登录",
         },
-        component: Login,
+        component: () =>
+        import(/* webpackChunkName: "login" */ "../components/Login.vue"),
       },
     ],
   },
 ];
-
 const router = createRouter({  //创建路由
   history: createWebHashHistory(),
   routes,
 });
-
 export default router;  //导出
