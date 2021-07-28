@@ -13,7 +13,7 @@ import "./assets/style/index.css"
 
 const app = createApp(App);
 
-//app全局挂载变量request：使用时可以this.$request.get等调用
+//app全局挂载变量request：使用时可以this.$request.get等调用,$storage同理
 app.config.globalProperties.$request = request;
 app.config.globalProperties.$storage = storage;
 
