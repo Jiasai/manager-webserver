@@ -8,9 +8,8 @@ import storage from './utils/storage';
 import ElementPlus from "element-plus";
 import 'element-plus/lib/theme-chalk/index.css';
 
-//导入基本样式
+//导入基本的样式
 import "./assets/style/index.css"
-
 
 const app = createApp(App);
 
@@ -21,7 +20,3 @@ app.config.globalProperties.$storage = storage;
 app.use(router).use(ElementPlus).mount('#app')
 
 
-//获取环境变量
-//console.log("环境变量=>",import.meta.env)
-// package.json修改script ,修改成开发环境
-//   "dev": "vite --mode dev",
